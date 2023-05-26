@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import '../styles/App.css';
 
-import Select from '../components/select/index.js';
+import Select from '../components/Select/index.js';
+import OpenAiTextBox from '../components/openAiTextBox/index.js';
 
 function App() {
-  const [selectedTextType, setSelectedTextType] = useState("Twitter post");
+  const [contentType, setContentType] = useState("Twitter post");
 
   return (
     <div className="App">
@@ -12,7 +13,8 @@ function App() {
       <body className="App-body">
         <div className="App-form">
           <form>
-            <Select setSelectedTextType={setSelectedTextType}/>
+            <Select setContentType={contentType}/>
+            <OpenAiTextBox contentType={contentType}/>
           </form>
         </div>
         <div className="App-bar">

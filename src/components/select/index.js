@@ -1,13 +1,13 @@
 import '../../styles/App.css'
 import React, { useState } from 'react';
 
-const Select = ({ setSelectedTextType }) => {
+const Select = ({ setContentType }) => {
 
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedOption, setSelectedOption] = useState('Articles');
 
     const handleChange = (event) => {
       setSelectedOption(event.target.value);
-      setSelectedTextType(selectedOption)
+      setContentType(selectedOption)
     };
 
   return (
