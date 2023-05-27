@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/App.css';
 
 import Select from '../components/Select/index.js';
-import OpenAiTextBox from '../components/openAiTextBox/index.js';
+import OpenAiTextBox from '../components/OpenAiTextBox/index.js';
 
 function App() {
   const [contentType, setContentType] = useState("Twitter post");
@@ -13,7 +13,7 @@ function App() {
       <body className="App-body">
         <div className="App-form">
           <form>
-            <Select setContentType={contentType}/>
+            <Select setContentType={setContentType}/>
             <OpenAiTextBox contentType={contentType}/>
           </form>
         </div>

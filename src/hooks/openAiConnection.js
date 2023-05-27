@@ -16,3 +16,13 @@ export async function post() {
     .then((response) => { return response.json() })
     .catch((error) => { console.log("RESPONSE ERROR", error) })
 }
+
+export async function requestContentIdeas(keywords, contentType) {
+  var requestTextResponse;
+  try {
+      requestTextResponse = await post(keywords, contentType)
+      return requestTextResponse.choices[0].text.trim()
+  } catch (error) {
+    console.error(`Error whe request: ${requestTextResponse}`);
+  }
+}
