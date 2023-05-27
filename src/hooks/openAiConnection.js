@@ -18,11 +18,12 @@ export async function post() {
 }
 
 export async function requestContentIdeas(keywords, contentType) {
-  var requestTextResponse;
+  const prompt="Do not do comments about your response, do not write any different orientation, just return 5 ideas for a content creator, that creates on " + contentType + " with the recommendations: "+keywords
+
   try {
-      requestTextResponse = await post(keywords, contentType)
+      const requestTextResponse = await post(prompt)
       return requestTextResponse.choices[0].text.trim()
   } catch (error) {
-    console.error(`Error whe request: ${requestTextResponse}`);
+    console.error(`Error whe request: ${error}`);
   }
 }
