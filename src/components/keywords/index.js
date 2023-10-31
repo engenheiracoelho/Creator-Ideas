@@ -1,10 +1,9 @@
 import '../../styles/App.css'
 
-import React, { useState } from 'react';
+import React from 'react';
 
 
-const OpenAiTextBox = ({ contentType }) => {
-  const [text, setText] = useState(contentType);
+const Keywords = ({ text, setText }) => {
 
   const handleChange = (event) => {
     setText(event.target.value);
@@ -20,4 +19,4 @@ const OpenAiTextBox = ({ contentType }) => {
   );
 };
 
-export default OpenAiTextBox;
+export default Keywords;
