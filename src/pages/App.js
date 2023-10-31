@@ -17,6 +17,7 @@ function App() {
           <form>
             <Select setContentType={setContentType} contentType={contentType}/>
             <Keywords text={text} setText={setText} />
+            <OpenAiRequester text={text} contentType={contentType} />
           </form>
         </div>
         <div className="App-bar">
