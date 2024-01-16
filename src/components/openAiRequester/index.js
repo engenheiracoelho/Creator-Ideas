@@ -5,7 +5,6 @@ import { requestOpenAi } from '../../anti_corruption_layer/adapter.js';
 import ReactGA from 'react-ga';
 
 const OpenAiRequester = ({ text, contentType }) => {
-  //TO-DO: UI Test
   const [sugestions, setSugestions] = useState()
 
   const handleClick = async () => {

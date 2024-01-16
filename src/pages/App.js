@@ -10,7 +10,7 @@ import OpenAiRequester from '../components/openAiRequester/index.js';
 function App() {
   const [contentType, setContentType] = useState("Twitter post");
   const [key, setKey] = useState();
-  //TO-DO: UI Test
+
   return (
     <>
       <header>
@@ -28,7 +28,6 @@ function App() {
         </div>
       </div>
     </>
-    // </div>
   );
 }
 export default App;

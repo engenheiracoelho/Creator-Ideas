@@ -4,7 +4,7 @@ import '../../styles/App.css'
 
 
 const Keywords = ({ text, setText }) => {
-  //TO-DO: UI Test
+
   const handleChange = (event) => {
     setText(event.target.value);
   };

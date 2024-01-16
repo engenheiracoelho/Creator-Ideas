@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactGA from 'react-ga';
 
 const Select = ({ setContentType }) => {
-    //TO-DO: UI Test
+
     const [selectedOption, setSelectedOption] = useState('Articles');
 
     const handleChange = (event) => {
