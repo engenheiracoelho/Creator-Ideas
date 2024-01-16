@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>ContentForge</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE7945T9RG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
+    </script>
+    
   </head>
   <body>
     <div id="root"></div>

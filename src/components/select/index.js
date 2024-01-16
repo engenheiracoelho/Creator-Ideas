@@ -1,5 +1,5 @@
-import '../../styles/App.css'
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 
 const Select = ({ setContentType }) => {
 
@@ -8,6 +8,12 @@ const Select = ({ setContentType }) => {
     const handleChange = (event) => {
       setSelectedOption(event.target.value);
       setContentType(selectedOption)
+
+      ReactGA.event({
+        category: 'User',
+        action: 'Select Content type',
+        nonInteraction: false
+      });
     };
 
   return (
